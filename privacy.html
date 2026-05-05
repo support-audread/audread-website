@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; font-src 'self';">
+    <meta name="referrer" content="no-referrer">
+    <title>Privacy Policy — AudRead</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #fafafa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 24px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        header a {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        main {
+            flex: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 36px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 12px;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        a {
+            color: #0066cc;
+        }
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header><a href="/">AudRead</a></header>
+    <main>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Effective date: May 5, 2026 &middot; Last updated: May 5, 2026</p>
+
+        <h2>1. Who we are</h2>
+        <p>AudRead (the "App") is provided by [LEGAL ENTITY NAME], LLC, a New Mexico limited liability company ("AudRead," "we," "us," or "our"). You can reach us at <a href="mailto:support@audread.com">support@audread.com</a>.</p>
+        <p>This Privacy Policy explains how the App handles information when you install and use it on an Apple iOS device.</p>
+
+        <h2>2. Summary</h2>
+        <p><strong>We do not collect, store, or transmit any personally identifiable information about you.</strong> AudRead is a local-only app: everything you do — including book selections, reading and listening progress, scanned page text, and preferences — stays on your device.</p>
+        <p>The only network requests AudRead makes are to public, free, catalog APIs to fetch information about public-domain books and audiobooks. Those requests contain only catalog identifiers (a book title, an ISBN, a LibriVox section ID, etc.) — never anything that identifies you as a person.</p>
+
+        <h2>3. What information AudRead does not collect</h2>
+        <p>AudRead does not collect, request, or transmit:</p>
+        <ul>
+            <li>Your name, email address, phone number, or any other contact information.</li>
+            <li>Your physical or precise location.</li>
+            <li>A user account, login credentials, or any authentication token.</li>
+            <li>Cookies, advertising identifiers, or device fingerprinting data.</li>
+            <li>Crash reports, analytics, telemetry, or behavioral metrics sent to us or to any third-party SDK.</li>
+            <li>Photographs of book pages you scan with the camera.</li>
+            <li>Optical-character-recognition (OCR) text extracted from those photographs.</li>
+            <li>Audio recordings of any kind.</li>
+            <li>Contents of your device storage, contacts, calendar, photos library, health data, or any other personal data.</li>
+        </ul>
+        <p>We have not integrated any analytics, advertising, attribution, or crash-reporting SDK in the App. There is no AudRead account system.</p>
+
+        <h2>4. What stays on your device</h2>
+        <p>The following information is created and stored locally on your device, in the App's private sandbox storage. It never leaves your device. We do not have access to it.</p>
+        <ul>
+            <li>The list of books you have added to your library.</li>
+            <li>Your reading and listening progress for each book (current chapter, timestamp, percent complete).</li>
+            <li>Your in-app preferences (playback speed, skip interval, text size, high-contrast and reduce-motion toggles, audio cache limit).</li>
+            <li>Cached audiobook chapter MP3 files downloaded from LibriVox for offline playback.</li>
+            <li>Cached transcripts that the App generates locally to align scanned pages with audiobook timestamps.</li>
+            <li>A small SQLite database that holds the above.</li>
+        </ul>
+        <p>If you delete the App, all of this data is removed by iOS along with it. You can also clear the audiobook audio cache at any time in <strong>Settings &rarr; Storage &rarr; Clear audio cache</strong>.</p>
+
+        <h2>5. Camera and on-device text recognition</h2>
+        <p>AudRead uses your device's camera to scan barcodes on the back of books to identify them, and to photograph a page of text so the App can find the matching position in the audiobook.</p>
+        <p>When you take a page-scan photo, the App processes the image entirely on your device using Apple-provided and Google-provided on-device libraries (Apple Vision Framework / Google ML Kit). The image and the recognized text are held in memory only for the duration of the lookup. <strong>They are not written to disk and are not transmitted off your device.</strong> They are discarded once the lookup completes.</p>
+        <p>If you decline camera permission or revoke it later in iOS Settings, the App continues to function but page scanning and barcode scanning will be unavailable.</p>
+
+        <h2>6. On-device audio transcription</h2>
+        <p>To align a scanned page to its audiobook position, the App uses an on-device speech-recognition model (whisper.cpp via the open-source whisper.rn package). The model file ships embedded inside the App. No audio leaves your device for transcription. The resulting transcript text is cached locally and deleted when you remove the App or clear the audio cache.</p>
+
+        <h2>7. Network requests AudRead does make</h2>
+        <p>The App contacts the following third-party catalog services solely to retrieve publicly available information about public-domain books and audiobooks. These requests contain only catalog metadata and your device's standard HTTP request headers (IP address, User-Agent string). They do not contain any data that identifies you as a person.</p>
+        <table>
+            <thead>
+                <tr><th>Service</th><th>Operator</th><th>What we send</th><th>What we receive</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Open Library</td><td>Internet Archive</td><td>Search query (title/author/ISBN)</td><td>Book metadata, cover image URLs</td></tr>
+                <tr><td>LibriVox</td><td>LibriVox.org</td><td>Search query, audiobook ID</td><td>Audiobook metadata, chapter MP3 URLs</td></tr>
+                <tr><td>Project Gutenberg</td><td>Project Gutenberg Literary Archive Foundation</td><td>Book ID</td><td>Plain text of the book</td></tr>
+                <tr><td>Open Library Covers</td><td>Internet Archive</td><td>Cover image ID</td><td>Cover image</td></tr>
+            </tbody>
+        </table>
+        <p>Each of these services has its own privacy policy and may log your IP address and the request you made:</p>
+        <ul>
+            <li><a href="https://openlibrary.org/about/policies">Open Library</a></li>
+            <li><a href="https://librivox.org/pages/privacy-policy/">LibriVox</a></li>
+            <li><a href="https://www.gutenberg.org/policy/privacy_policy.html">Project Gutenberg</a></li>
+        </ul>
+        <p>All requests from AudRead use HTTPS. The App will not connect to a non-HTTPS endpoint.</p>
+
+        <h2>8. Information Apple may collect independently of us</h2>
+        <p>Apple, as the operator of the App Store and iOS, may collect certain information about your use of any iOS app (including AudRead) under its own privacy policy. Apple's privacy practices are governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. We do not request, receive, or process this data.</p>
+
+        <h2>9. Children's privacy</h2>
+        <p>AudRead is not directed at children under 13. We do not knowingly collect any personal information from anyone, including children. Because AudRead does not collect data, there is nothing to delete from our records. If you have any concerns, contact us at <a href="mailto:support@audread.com">support@audread.com</a>.</p>
+
+        <h2>10. Your privacy rights</h2>
+        <p>Because AudRead does not collect or store any personal data on its servers, we have no personal data about you to share, correct, or delete. The data the App stores locally on your device is fully under your control: you can delete it by uninstalling the App or by clearing the audio cache from <strong>Settings &rarr; Storage</strong>.</p>
+        <p>If you reside in a jurisdiction with specific privacy rights (CCPA, VCDPA, GDPR, or similar), you may submit a request to <a href="mailto:support@audread.com">support@audread.com</a>. We will respond to confirm that we hold no personal data about you.</p>
+
+        <h2>11. International users</h2>
+        <p>AudRead is designed and operated from the United States. By installing and using the App, you understand that the App's network requests are routed to servers operated by the third-party catalog services listed in Section 7, which may be located outside your country.</p>
+
+        <h2>12. Security</h2>
+        <p>We do not transmit personal data, so there is no transmission of personal data to secure. Locally stored data sits in iOS's app sandbox, which iOS isolates from other apps and protects with standard iOS file protections.</p>
+
+        <h2>13. Changes to this policy</h2>
+        <p>If we materially change how the App handles information, we will update this Privacy Policy and post the new version at this URL. The "Last updated" date at the top reflects the most recent revision. Continued use of the App after a change becomes effective constitutes your acceptance of the updated policy.</p>
+
+        <h2>14. Contact</h2>
+        <p>[LEGAL ENTITY NAME], LLC<br><a href="mailto:support@audread.com">support@audread.com</a></p>
+    </main>
+    <footer>&copy; 2026 AudRead. All rights reserved.</footer>
+</body>
+</html>
