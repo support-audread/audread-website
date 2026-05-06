@@ -17,6 +17,21 @@
             display: flex;
             flex-direction: column;
         }
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            background: #0066cc;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            z-index: 100;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .skip-link:focus {
+            top: 16px;
+        }
         main {
             flex: 1;
             max-width: 640px;
@@ -49,11 +64,16 @@
         }
         .links a {
             color: #0066cc;
-            text-decoration: none;
+            text-decoration: underline;
             font-size: 1rem;
         }
         .links a:hover {
-            text-decoration: underline;
+            text-decoration: none;
+        }
+        a:focus-visible {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+            border-radius: 2px;
         }
         footer {
             text-align: center;
@@ -64,21 +84,22 @@
         }
         footer a {
             color: #888;
-            text-decoration: none;
+            text-decoration: underline;
         }
         footer a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <main>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <main id="main">
         <h1>AudRead</h1>
         <p class="tagline">Pick up where you left off.</p>
         <p class="description">
             AudRead helps you switch between reading a printed book and listening to its free public-domain audiobook. Scan a page with your camera, and AudRead finds your place in the audio — so you can keep going hands-free.
         </p>
-        <nav class="links">
+        <nav class="links" aria-label="Legal and support">
             <a href="/privacy.html">Privacy Policy</a>
             <a href="/terms.html">Terms of Service</a>
             <a href="mailto:support@audread.com">Contact Support</a>
