@@ -17,6 +17,21 @@
             display: flex;
             flex-direction: column;
         }
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            background: #0066cc;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            z-index: 100;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .skip-link:focus {
+            top: 16px;
+        }
         header {
             padding: 24px;
             text-align: center;
@@ -24,9 +39,14 @@
         }
         header a {
             color: #1d1d1f;
-            text-decoration: none;
+            text-decoration: underline;
+            text-decoration-color: #ccc;
+            text-underline-offset: 3px;
             font-weight: 600;
             font-size: 1.1rem;
+        }
+        header a:hover {
+            text-decoration-color: #1d1d1f;
         }
         main {
             flex: 1;
@@ -76,6 +96,15 @@
         }
         a {
             color: #0066cc;
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:focus-visible {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+            border-radius: 2px;
         }
         footer {
             text-align: center;
@@ -87,8 +116,9 @@
     </style>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header><a href="/">AudRead</a></header>
-    <main>
+    <main id="main">
         <h1>Privacy Policy</h1>
         <p class="meta">Effective date: May 5, 2026 &middot; Last updated: May 5, 2026</p>
 
@@ -137,9 +167,9 @@
 
         <h2>7. Network requests AudRead does make</h2>
         <p>The App contacts the following third-party catalog services solely to retrieve publicly available information about public-domain books and audiobooks. These requests contain only catalog metadata and your device's standard HTTP request headers (IP address, User-Agent string). They do not contain any data that identifies you as a person.</p>
-        <table>
+        <table aria-label="Third-party services AudRead connects to">
             <thead>
-                <tr><th>Service</th><th>Operator</th><th>What we send</th><th>What we receive</th></tr>
+                <tr><th scope="col">Service</th><th scope="col">Operator</th><th scope="col">What we send</th><th scope="col">What we receive</th></tr>
             </thead>
             <tbody>
                 <tr><td>Open Library</td><td>Internet Archive</td><td>Search query (title/author/ISBN)</td><td>Book metadata, cover image URLs</td></tr>
